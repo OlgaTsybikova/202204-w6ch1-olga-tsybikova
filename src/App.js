@@ -1,5 +1,7 @@
+import ToDoList from "./components/ToDoList/ToDoList";
+
 function App() {
-  return <p>UWU</p>;
+  return <ToDoList />;
 }
 
 export default App;
