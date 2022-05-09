@@ -2,7 +2,7 @@ const ToDoData = [
   {
     id: 1,
     name: "Aguantarse las ganas de rajarse las venas en el bootcamp :D",
-    done: false,
+    done: true,
   },
   {
     id: 2,
