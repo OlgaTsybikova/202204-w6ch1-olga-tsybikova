@@ -1,13 +1,11 @@
 import { useDispatch } from "react-redux";
-import {
-  deleteToDoActionCreator,
-  editToDoActionCreator,
-} from "../../redux/features/toDos/toDosSlice";
+import { editToDoActionCreator } from "../../redux/features/toDos/toDosSlice";
+import { deleteToDoActionThunk } from "../../redux/thunks/todosThunk";
 
 const ToDo = ({ todo: { id, name, done } }) => {
   const dispatch = useDispatch();
   const deleteToDo = () => {
-    dispatch(deleteToDoActionCreator(id));
+    dispatch(deleteToDoActionThunk(id));
   };
 
   const changeDone = (event) => {
