@@ -11,6 +11,8 @@ export const loadToDoActionThunk = () => async (dispatch) => {
 };
 
 export const deleteToDoActionThunk = (id) => async (dispatch) => {
-  const { data: todo } = await axios.delete(`${process.env.REACT_APP_API_URL}`);
-  dispatch(deleteToDoActionCreator(todo));
+  const { status } = await axios.delete(process.env.REACT_APP_API_URL + id);
+  if (status === 200) {
+    dispatch(deleteToDoActionCreator(id));
+  }
 };
